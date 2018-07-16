@@ -1,0 +1,43 @@
+<!--index.wxml-->
+<view class="container">
+	<view class="top">
+		<view class="input-container">
+			<label for="salary"> 睡前工资</label>
+			<input id="salary" type="digit" placeholder="请输入工资总额" bindinput="getMoney" />
+		</view>
+		<view class="switch-bar" bindtap="changStatus">
+			<view class="switch-txt">自定义五险一金</view>
+			<view class="switch-line"></view>
+			<view class="switch-status {{switchStatus}}"></view>		
+		</view>
+		<block wx:if="{{custom51}}">
+			<view class="input-container">
+				<label for="endowment">养老保险</label>
+				<input id="endowment" type="digit" placeholder="通常为工资的8%" bindinput="getMoney" />
+			</view>
+			<view class="input-container">
+				<label for="medical">医疗保险</label>
+				<input id="medical" type="digit" placeholder="通常为工资的2%" bindinput="getMoney" />
+			</view>
+			<view class="input-container">
+				<label for="unemployment">失业保险</label>
+				<input id="unemployment" type="digit" placeholder="通常为工资的0.2%" bindinput="getMoney" />
+			</view>
+			<view class="input-container">
+				<label for="injury">工伤保险</label>
+				<input id="injury" type="digit" placeholder="通常为工资的12" bindinput="getMoney" />
+			</view>
+			<view class="input-container">
+				<label for="childbirth">生育保险</label>
+				<input id="childbirth" type="digit" placeholder="通常为工资的12" bindinput="getMoney" />
+			</view>
+			<view class="input-container">
+				<label for="housing">住房公积金</label>
+				<input id="housing" type="digit" placeholder="通常为工资的12%" bindinput="getMoney" />
+			</view>
+		</block>
+	</view>
+	<view class="bottom">
+		<button type="primary" bindtap="routeToChart">计算</button>
+	</view>
+</view>
