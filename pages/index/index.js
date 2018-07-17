@@ -34,6 +34,7 @@ Page({
   getSalaryObj: function(){
     var obj = {};
     if(this.data.custom51){
+      obj.custom51 = this.data.custom51;
       obj.salary = this.data.salary;
       obj.endowment = this.data.endowment;
       obj.medical = this.data.medical;
@@ -42,6 +43,7 @@ Page({
       obj.childbirth = this.data.childbirth;
       obj.housing = this.data.housing;
     }else{
+      obj.custom51 = this.data.custom51;
       obj.salary = this.data.salary;
     }
     return obj;
