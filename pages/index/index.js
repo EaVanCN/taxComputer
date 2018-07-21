@@ -1,5 +1,6 @@
 //index.js
 //获取应用实例
+var utils = require("../../utils/util");
 const app = getApp()
 
 Page({
@@ -34,17 +35,17 @@ Page({
   getSalaryObj: function(){
     var obj = {};
     if(this.data.custom51){
-      obj.custom51 = this.data.custom51;
-      obj.salary = this.data.salary;
-      obj.endowment = this.data.endowment;
-      obj.medical = this.data.medical;
-      obj.unemployment = this.data.unemployment;
-      obj.injury = this.data.injury;
-      obj.childbirth = this.data.childbirth;
-      obj.housing = this.data.housing;
+      obj.custom51 = utils.get2Number(this.data.custom51);
+      obj.salary = utils.get2Number(this.data.salary);
+      obj.endowment = utils.get2Number(this.data.endowment);
+      obj.medical = utils.get2Number(this.data.medical);
+      obj.unemployment = utils.get2Number(this.data.unemployment);
+      obj.injury = utils.get2Number(this.data.injury);
+      obj.childbirth = utils.get2Number(this.data.childbirth);
+      obj.housing = utils.get2Number(this.data.housing);
     }else{
-      obj.custom51 = this.data.custom51;
-      obj.salary = this.data.salary;
+      obj.custom51 = utils.get2Number(this.data.custom51);
+      obj.salary = utils.get2Number(this.data.salary);
     }
     return obj;
   }

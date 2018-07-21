@@ -14,6 +14,12 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+const get2Number = n =>{
+  var floatNum = parseFloat(n);
+  return parseFloat(floatNum.toFixed(2));
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  get2Number: get2Number
 }

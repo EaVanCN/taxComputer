@@ -25,11 +25,11 @@
 			</view>
 			<view class="input-container">
 				<label for="injury">工伤保险</label>
-				<input id="injury" type="digit" placeholder="通常为工资的12" bindinput="getMoney" />
+				<input id="injury" type="digit" placeholder="个人无需缴纳" bindinput="getMoney" />
 			</view>
 			<view class="input-container">
 				<label for="childbirth">生育保险</label>
-				<input id="childbirth" type="digit" placeholder="通常为工资的12" bindinput="getMoney" />
+				<input id="childbirth" type="digit" placeholder="个人无需缴纳" bindinput="getMoney" />
 			</view>
 			<view class="input-container">
 				<label for="housing">住房公积金</label>
