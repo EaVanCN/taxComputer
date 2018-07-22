@@ -1,4 +1,6 @@
-ec-canvas {
-    width: 100%;
-    height: 50%;
-}  
+.old-canvas{
+    flex-basis: 50%;
+}
+.new-canvas{
+    flex-basis: 50%;
+}

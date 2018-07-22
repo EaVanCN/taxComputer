@@ -1,5 +1,9 @@
 <!--index.wxml-->
 <view class="container">
-    <ec-canvas id="old-chart" canvas-id="old-chart" ec="{{ oldChart }}"></ec-canvas>
-    <ec-canvas id="new-chart" canvas-id="new-chart" ec="{{ newChart }}"></ec-canvas>
+    <view class="old-canvas">
+        <ec-canvas id="old-chart" canvas-id="old-chart" ec="{{ oldChart }}"></ec-canvas>
+    </view>
+    <view class="new-canvas">
+        <ec-canvas id="new-chart" canvas-id="new-chart" ec="{{ newChart }}"></ec-canvas>
+    </view>
 </view>

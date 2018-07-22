@@ -2,8 +2,12 @@
 <view class="container">
 	<view class="top">
 		<view class="input-container">
-			<label for="salary"> 睡前工资</label>
+			<label for="salary"> 税前工资</label>
 			<input id="salary" type="digit" placeholder="请输入工资总额" bindinput="getMoney" />
+		</view>
+		<view class="input-container">
+			<label for="startPoint"> 起征点</label>
+			<input id="startPoint" type="digit" value="3500" placeholder="请输入起征点" bindinput="getMoney" />
 		</view>
 		<view class="switch-bar" bindtap="changStatus">
 			<view class="switch-txt">自定义五险一金</view>
@@ -24,16 +28,14 @@
 				<input id="unemployment" type="digit" placeholder="通常为工资的0.2%" bindinput="getMoney" />
 			</view>
 			<view class="input-container">
-				<label for="injury">工伤保险</label>
-				<input id="injury" type="digit" placeholder="个人无需缴纳" bindinput="getMoney" />
-			</view>
-			<view class="input-container">
-				<label for="childbirth">生育保险</label>
-				<input id="childbirth" type="digit" placeholder="个人无需缴纳" bindinput="getMoney" />
-			</view>
-			<view class="input-container">
 				<label for="housing">住房公积金</label>
 				<input id="housing" type="digit" placeholder="通常为工资的12%" bindinput="getMoney" />
+			</view>
+		</block>
+		<block wx:else>
+			<view class="input-container">
+				<label for="total">五险一金</label>
+				<input id="total" type="digit" placeholder="不输入该项默认为工资的22.2%" bindinput="getMoney" />
 			</view>
 		</block>
 	</view>
