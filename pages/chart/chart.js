@@ -114,14 +114,14 @@ Page({
       };
     },
     getSalaryObj: function(params,startPoint,taxForm){
-      if(params.custom51){
+      if(params.custom51 || !params.copFull){
         //自定义五险一金的情况
         var total = params.total;
         var moneyForTax = params.salary-total; 
       }else{
-        //默认按比例扣除五险一金的情况
-        var total = utils.get2Number(params.salary*0.222); 
-        var moneyForTax = params.salary-total; 
+        //默认按比例扣除五险一金的情况（或者拿用户输入的数字）
+          var total = utils.get2Number(params.salary*0.222); 
+          var moneyForTax = params.salary-total; 
       }
       //通过起征点计算需计算税额的部分
       var moneyForTaxStart = moneyForTax-startPoint;

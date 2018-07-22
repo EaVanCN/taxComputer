@@ -10,7 +10,7 @@
 			<input id="startPoint" type="digit" value="3500" placeholder="请输入起征点" bindinput="getMoney" />
 		</view>
 		<view class="switch-bar" bindtap="changStatus">
-			<view class="switch-txt">自定义五险一金</view>
+			<view class="switch-txt">{{custom51 ? '点击输入五险一金总额':'点击自定义五险一金'}}</view>
 			<view class="switch-line"></view>
 			<view class="switch-status {{switchStatus}}"></view>		
 		</view>
@@ -34,8 +34,15 @@
 		</block>
 		<block wx:else>
 			<view class="input-container">
-				<label for="total">五险一金</label>
-				<input id="total" type="digit" placeholder="不输入该项默认为工资的22.2%" bindinput="getMoney" />
+				<label for="total" class="{{copFull ? 'input-disabled' : ''}}">五险一金</label>
+				<input class="{{copFull ? 'input-disabled' : ''}}" disabled="{{copFull}}" id="total" type="digit" placeholder="公司全额缴纳为工资的22.2%" bindinput="getMoney" />
+			</view>
+			<view class="input-checkbox">
+				<checkbox-group bindchange="checkboxChange">
+					<label class="checkbox" >
+						<checkbox />公司全额缴纳五险一金
+					</label>
+				</checkbox-group>
 			</view>
 		</block>
 	</view>

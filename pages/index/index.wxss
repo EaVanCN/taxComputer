@@ -33,13 +33,15 @@
   font-size:12px;
 }
 .switch-txt{
-  flex-basis: 30%;
+
+  padding:0 5px;
   text-align: center;
   color:#179B16;
 }
 .switch-line{
-  flex-basis: 60%;
+
   flex-grow: 1;
+  flex-shrink: 1;
   background: repeating-linear-gradient(#f4f4f4,#f4f4f4 48%,#179B16 48%,#179B16 53%);
 }
 .switch-bar{
@@ -81,4 +83,16 @@
   height:30px;
   line-height:30px;
   font-size:14px;
+}
+.input-checkbox label{
+  padding: 10px 10px;
+  font-size: 14px;
+  color: #179B16;
+}
+.input-checkbox checkbox .wx-checkbox-input{
+  width:10px;
+  height:10px;
+}
+.input-disabled{
+  color: #999;
 }
