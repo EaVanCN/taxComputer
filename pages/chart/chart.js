@@ -82,7 +82,7 @@ Page({
           orient: 'horizontal',
           left: 'center',
           bottom: '10%',
-          data: ['五险一金','个人所得税','实发工资']
+          data: ['实发工资','五险一金','个人所得税']
         },
         series: [{
           type: 'pie', 
@@ -143,7 +143,7 @@ Page({
       //实际需缴纳的税和实际到手工资
       var real51 = total;
       var realtax = utils.get2Number(moneyForTaxStart*rate-subNum);
-      var realSalary = (moneyForTax-(moneyForTaxStart*rate-subNum)).toFixed(2);  
+      var realSalary = utils.get2Number(moneyForTax-(moneyForTaxStart*rate-subNum)).toFixed(2);  
       var showArr = [];
       if(realSalary != 0){
         showArr.push({

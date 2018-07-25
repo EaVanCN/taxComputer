@@ -75,5 +75,11 @@ Page({
     this.setData({
       copFull: e.detail.value.length > 0 ? true : false
     })
+  },
+  onShareAppMessage: function (res) {
+    return {
+      title: '分享个税计算器',
+      path: '/page/index/index'
+    }
   }
 })
